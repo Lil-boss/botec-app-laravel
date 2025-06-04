@@ -9,10 +9,17 @@ This is a **Dockerized Laravel application** focused on **performance monitoring
 ---
 ## 📦 Services Included
 
-- **Laravel (PHP 8.3 runtime via Sail)** — The core application.
-- **MySQL** — Primary database used by the app.
-- **Redis** — Used for caching and queue management.
-- **Prometheus** — For scraping performance metrics and monitoring the health of services.
+| Service        | Purpose                             |
+|----------------|-------------------------------------|
+| `laravel.test` | Laravel app runtime (PHP 8.3 via Sail) |
+| `mysql`        | Database service                    |
+| `redis`        | Caching and queue service           |
+| `prometheus`   | Metrics collection and monitoring   |
+
+### ⚠️ PHP Compatibility Warning
+Prometheus is scraping metrics from a Laravel application running on **PHP 8.3**.  
+Make sure all of your Laravel dependencies and extensions are compatible with PHP 8.3.
+
 
 ## 🔧 Why This Setup Matters
 
